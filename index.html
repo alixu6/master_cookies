@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Chef - Cookies Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="view-results" onclick="viewResults()">View Results</button>
+    <h1>Master Chef - Cookies Edition</h1>
+    <img src="images/cookie.jpg" alt="cookie">
+    <h2>Thank you for being part of the jury panel :)</h2>
+    <h2>It is now time to vote for your favorite cookie!</h2>
+    <div id="cookie-list">
+    </div>
+
+    <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="confirm-vote">Confirm</button>
+            <button id="cancel-vote">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

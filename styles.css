@@ -1,0 +1,208 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #3a1c07de;
+    font-size: 2.5em;
+    margin-top: 40px;
+}
+
+h2 {
+    font-style: italic;
+    color: #3a1c07de;
+}
+
+/* Button styling */
+button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+#view-results, #go-back {
+    background-color: #ffffff;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 10px;
+    font-size: 10px;
+    border: #ffffff;
+}
+
+#reset-votes {
+    background-color: #ffffff;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-left: 10px;
+    font-size: 10px;
+    border: #ffffff;
+}
+
+#view-results:hover, #reset-votes:hover, #go-back:hover {
+    background-color: #d2691e9c;
+    color: #4b22059c;
+}
+
+/* Cookie voting button colors */
+button:active {
+    background-color: #0056b3;
+}
+
+/* Modal styling */
+.modal.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: #3a1c07de;
+    font-style: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#confirm-vote, #cancel-vote {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#confirm-vote {
+    background-color: #28a745;
+    color: white;
+}
+
+#cancel-vote {
+    background-color: #dc3545;
+    color: white;
+}
+
+#confirm-vote:hover {
+    background-color: #218838;
+}
+
+#cancel-vote:hover {
+    background-color: #c82333;
+}
+
+/* Results styling */
+
+#results {
+    margin: 20px 0;
+    flex: 1;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+#results p {
+    margin: 0px 0;
+    display: block;  /* Ensures each line is on a new line */
+    width: 400px;  /* Ensures the background only covers the content */
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: auto;   /* Center the content horizontally */
+    margin-right: auto;  /* Center the content horizontally */
+    color: #3a1c07de;
+}
+
+#results p:nth-child(odd) {
+    background-color: #f7f7f7;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#results p:nth-child(even) {
+    background-color: #e0e0e0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Cookie list button layout using CSS Grid */
+#cookie-list {
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* 4 columns with automatic width based on content */
+    gap: 5px; /* Reduced spacing between buttons */
+    justify-items: center; /* Center buttons horizontally */
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 0 150px; /* Margin on the left and right sides of the grid */
+}
+
+/* Button styling */
+button {
+    background-color: #d2691e9c;
+    color: #4b22059c;
+    border: 3px solid #4b22059c; /* Darker border for better visibility */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding based on content size */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold text for better visibility */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-block; /* Adjust size based on content */
+    margin: 5; /* Remove margin on individual buttons */
+}
+
+/* Button hover effects */
+button:hover {
+    background-color: #4b22059c;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Button active effects */
+button:active {
+    background-color: #003d80; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset size when clicked */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow when active */
+}
+
+/* Ensure the buttons look good on all screen sizes */
+@media (max-width: 768px) {
+    #cookie-list {
+        grid-template-columns: repeat(2, auto); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #cookie-list {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
